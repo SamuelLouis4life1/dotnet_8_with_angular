@@ -33,10 +33,15 @@ namespace Infrastructure.Data
         {
             return await ApplySpecification(specification).ToListAsync();
         }
-        
+
         public async Task<T> GetEntityWithSpecification(ISpecification<T> specification)
         {
             return await ApplySpecification(specification).FirstOrDefaultAsync();
+        }
+
+        public async Task<int> CountAsync(ISpecification<T> specification)
+        {
+            return await ApplySpecification(specification).CountAsync();
         }
 
         private IQueryable<T> ApplySpecification(ISpecification<T> specification)
