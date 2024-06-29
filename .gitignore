@@ -484,3 +484,7 @@ $RECYCLE.BIN/
 *.swp
 note.text
 API/appsettings.json
+client/ssl/-+1-key.pem
+client/ssl/-+1.pem
+client/ssl/localhost-key.pem
+client/ssl/localhost.pem
